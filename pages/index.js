@@ -12,7 +12,7 @@ export default function Home() {
 
       <main>
         <h1>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
+          Welcome to <a href='https://nextjs.org'>Next.js!!</a>
           <Image src='/banner.png' width={853} height={682} />
         </h1>
       </main>
