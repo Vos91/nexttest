@@ -2,6 +2,18 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export default function Home() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch('/api/formtest', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify('Jasper'),
+    });
+  };
+
   return (
     <div>
       <Head>
@@ -14,6 +26,13 @@ export default function Home() {
         <h1>
           Welcome to <a href='https://nextjs.org'>Next.js!</a>
           <Image src='/banner.png' width={853} height={682} />
+          <button
+            onClick={(e) => {
+              handleSubmit(e);
+            }}
+          >
+            Test contact
+          </button>
         </h1>
       </main>
     </div>
